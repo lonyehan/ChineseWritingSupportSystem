@@ -1,0 +1,2 @@
+# ChineseWritingSupportSystem
+中文寫作輔助系統
