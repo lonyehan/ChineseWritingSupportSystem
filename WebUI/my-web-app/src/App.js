@@ -1,24 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+// import logo from './logo.svg';
 import './App.css';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.bubble.css'
 
+// var Size = RQuill.import('attributors/style/size');
+// Quill.register(Size, true);
+function MyEditor(){
+  const [value, setValue] = useState('請在此輸入文字')
+  // setState({value: '請在此輸入文字'})
+  return(
+    <ReactQuill theme='bubble' value={value} onChange={setValue}/>
+  );
+}
+function MainPage(){
+  return(
+    <>
+    <MyEditor className='Editor'/>
+    <button>送出</button>
+    <div className='Assistant'></div>
+    </>
+  );
+}
+
+// function TitleList(){
+//   return(
+//     <div className='titleList'>
+//     </div>
+//   );
+// }
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <TitleList/> */}
+      <MainPage className='mainPage'/>
     </div>
   );
 }

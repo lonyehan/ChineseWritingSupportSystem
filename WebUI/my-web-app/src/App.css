@@ -1,4 +1,28 @@
 .App {
+  display: flex;
+}
+.quill{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 80%;
+  -webkit-align-self: baseline;
+  align-self: baseline;
+  /* font-size: px; */
+}
+/* .quill>.ql-editor{
+  font-size: 30px;
+} */
+.quill>.ql-container{
+  font-size: 30px;
+}
+/* .ql-container {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10px;
+} */
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +59,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
